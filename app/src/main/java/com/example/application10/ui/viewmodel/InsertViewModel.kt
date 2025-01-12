@@ -1,5 +1,10 @@
 package com.example.application10.ui.viewmodel
 
+data class InsertUiState(
+    val insertUiEvent: MahasiswaEvent = MahasiswaEvent(),
+    val isEntryValid: FormErrorState = FormErrorState(),
+)
+
 data class FormErrorState(
     val nim: String? = null,
     val nama: String? = null,
