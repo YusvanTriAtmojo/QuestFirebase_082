@@ -1,5 +1,7 @@
 package com.example.application10.ui.viewmodel
 
+import com.example.application10.model.Mahasiswa
+
 sealed class FormState{
     object Idle : FormState()
     object Loading : FormState()
@@ -35,4 +37,14 @@ data class MahasiswaEvent(
     val kelas: String = "",
     val angkatan: String = "",
 
+)
+
+//menyimpan input form ke dalam entity
+fun MahasiswaEvent.toMhsModel(): Mahasiswa = Mahasiswa(
+    nim = nim,
+    nama = nama,
+    jenisKelamin = jenisKelamin,
+    alamat = alamat,
+    kelas = kelas,
+    angkatan = angkatan
 )
