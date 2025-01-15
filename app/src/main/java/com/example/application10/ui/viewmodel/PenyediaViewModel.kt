@@ -19,6 +19,12 @@ object PenyediaViewModel {
                 aplikasiMhs().container.mahasiswaRepository
             )
         }
+        initializer {
+            DetailViewModel(
+                createSavedStateHandle(),
+                aplikasiMhs().container.mahasiswaRepository
+            )
+        }
 
     }
 }

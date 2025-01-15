@@ -32,6 +32,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -191,11 +192,11 @@ fun MhsCard(
                 )
             }
             Text(
-                text = mahasiswa.kelas,
+                text = mahasiswa.alamat,
                 style = MaterialTheme.typography.titleMedium,
             )
             Text(
-                text = mahasiswa.alamat,
+                text = mahasiswa.judul,
                 style = MaterialTheme.typography.titleMedium,
             )
         }
